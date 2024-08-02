@@ -1,11 +1,11 @@
 <div class="header-new">
   <div class="logo">{{ section.settings.text }}</div>
-  <div class="menu">
+  <div class="menu">Actions</div>
+  <div class="actions">
     {% for link in linklists['main-menu'].links -%}
       {{ link.title | link_to: link.url }}
     {%- endfor %}
   </div>
-  <div class="actions">actions</div>
 </div>
 
 {% style %}
@@ -15,9 +15,9 @@
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    max-width:1200px;
-    margin:auto;
-    padding:20px 40px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 40px;
   }
 
   .header-new .logo {
