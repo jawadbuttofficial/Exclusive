@@ -1,4 +1,29 @@
 <h1>{{ section.settings.text }}</h1>
+<div class="header-new">
+  <div class="logo">{{ section.settings.text }}</div>
+  <div class="menu">menu</div>
+  <div class="actions">actions</div>
+</div>
+
+{% style %}
+  .header-new {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  .header-new .logo {
+    grid-area: 1 / 1 / 2 / 4;
+  }
+  .header-new .menu {
+    grid-area: 1 / 10 / 2 / 13;
+  }
+  .header-new .actions {
+    grid-area: 1 / 4 / 2 / 10;
+  }
+{% endstyle %}
 
 {% schema %}
 {
@@ -7,8 +32,8 @@
     {
       "type": "text",
       "id": "text",
-      "label": "Text",
-      "default":"Header"
+      "label": "Logo Text",
+      "default": "Exclusive"
     }
   ],
   "presets": [{ "name": "Default custom section" }],
