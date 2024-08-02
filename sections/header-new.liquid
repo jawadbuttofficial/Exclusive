@@ -1,11 +1,17 @@
-<h1>Hello world</h1>
+<h1>{{ section.settings.text }}</h1>
 
 {% schema %}
-
 {
-"name": "Custom section",
-"settings": [],
-"presets": [{ "name": "Default custom section" }]
+  "name": "Custom section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default":"Header"
+    }
+  ],
+  "presets": [{ "name": "Default custom section" }],
+  "tag": "header"
 }
-
 {% endschema %}
