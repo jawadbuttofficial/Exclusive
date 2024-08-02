@@ -1,7 +1,11 @@
 <h1>{{ section.settings.text }}</h1>
 <div class="header-new">
   <div class="logo">{{ section.settings.text }}</div>
-  <div class="menu">menu</div>
+  <div class="menu">
+    {% for link in linklists['main-menu'].links -%}
+      {{ link.title | link_to: link.url }}
+    {%- endfor %}
+  </div>
   <div class="actions">actions</div>
 </div>
 
